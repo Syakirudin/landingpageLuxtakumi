@@ -12,6 +12,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style/normalize.css">
 	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+
 </head>
 
 <body>
@@ -23,10 +26,10 @@
 			</div>
 			<ul class="nav-links">
 				<li><a href="#about">About</a></li>
-				<li><a href="#benefit">Benefit</a></li>
+				<li><a href="#benefits">Benefit</a></li>
 				<li><a href="#portfolio">Portfolio</a></li>
-				<li><a href="#service">Services</a></li>
-				<li><a href="#contact">Contek</a></li>
+				<li><a href="#serv">Services</a></li>
+				<li><a href="#contact">Contact</a></li>
 			</ul>
 			<div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
 		</nav>
@@ -73,7 +76,7 @@
 		<main class="main">
 
 			<!-- div .about -->
-			<section class="about">
+			<section class="section about" data-id="about">
 				<div class="about__wrapp">
 					<div class="about__img">
 						<img src="img/2.jpg" alt="2">
@@ -82,16 +85,13 @@
 						<h2 class="section-title">abo<span class="stroke">ut</span>
 							<span class="section-title__square"></span>
 						</h2>
-						<p class="about__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque esse
-							aspernatur fugit debitis quisquam. Quia exercitationem ipsum voluptas voluptatum hic
-							enim quo provident culpa possimus cupiditate! Dolorum quae doloremque cum rerum ipsam
-							inventore beatae, at odit, velit, aspernatur minima! Corporis.</p>
+						<p class="about__p">With 5+ years in graphic design, we’ve spiced up brands big and small. We’re not just designers; we’re artist who translate visions into visual master piece our promise:</p>
 					</div>
 				</div>
 			</section>
 
 			<!-- div .benefits -->
-			<section class="benefits">
+			<section class="section benefits" data-id="benefits">
 				<div class="content">
 					<h2 class="section-title">benef<span class="stroke">its</span>
 						<span class="section-title__square"></span>
@@ -133,7 +133,7 @@
 			</section>
 
 			<!-- div .work -->
-			<section class="work">
+			<section class="section portfolio" data-id="portfolio">
 				<div class="content">
 					<h2 class="section-title">portfo<span class="stroke">lio</span>
 						<span class="section-title__square"></span>
@@ -205,7 +205,7 @@
 			</section>
 
 			<!-- div .serv -->
-			<section class="serv">
+			<section class="section services" data-id="serv">
 				<div class="content">
 					<h2 class="section-title">servic<span class="stroke">es</span>
 						<span class="section-title__square"></span>
@@ -217,7 +217,7 @@
 								<img src="img/arrow.svg" alt="">
 							</span>
 							<div class="serv__item-txt">
-								<span class="serv__item-text">/Graphic Design</span>
+								<span class="serv__item-text">/Logo Design</span>
 							</div>
 						</div>
 						<div class="serv__item">
@@ -225,7 +225,7 @@
 								<img src="img/arrow.svg" alt="">
 							</span>
 							<div class="serv__item-txt">
-								<span class="serv__item-text">/UX/UI Design</span>
+								<span class="serv__item-text">/Poster Design</span>
 							</div>
 						</div>
 						<div class="serv__item">
@@ -233,7 +233,7 @@
 								<img src="img/arrow.svg" alt="">
 							</span>
 							<div class="serv__item-txt">
-								<span class="serv__item-text">/Web Design</span>
+								<span class="serv__item-text">/3D Rendering</span>
 							</div>
 						</div>
 						<div class="serv__item">
@@ -241,7 +241,7 @@
 								<img src="img/arrow.svg" alt="">
 							</span>
 							<div class="serv__item-txt">
-								<span class="serv__item-text">/Brend Design</span>
+								<span class="serv__item-text">/Logo Animation</span>
 							</div>
 						</div>
 						
@@ -250,22 +250,32 @@
 				
 			</section>
 
-			<section class="contact">
-				<div class="contact-form">
-					<h2>Contact Us</h2>
-					<form>
-						<label for="phone">Phone Number:</label>
-						<input type="text" id="phone" name="phone" placeholder="Enter your phone number">
-						<button type="submit">Submit</button>
-					</form>
-				</div>
-				<div class="whatsapp-message">
-					<h2>WhatsApp Message</h2>
-					<p>For any inquiries, feel free to send us a message on WhatsApp.</p>
-					<p>Click the button below to chat with us on WhatsApp:</p>
-					<a href="https://wa.me/+60182467134" target="_blank" class="whatsapp-button">Chat on WhatsApp</a>
+			<section class="section contact" data-id="contact">
+				<div class="container ">
+					<div class="contact-form">
+						<h2>Contact Us</h2>
+						<form>
+							<label for="phone">Phone Number:</label>
+							<input type="text" id="phone" name="phone" placeholder="Enter your phone number">
+							<button type="submit">Submit</button>
+						</form>
+					</div>
+					<div class="social-media">
+						<h2>Find us on:</h2>
+						<i class="fab fa-facebook" style="color: #1877f2;"></i> <!-- Facebook icon in blue color -->
+						<i class="fab fa-twitter" style="color: #1da1f2;"></i> <!-- Twitter icon in blue color -->
+						<i class="fab fa-tiktok" style="color: white;"></i> <!-- TikTok icon in black color -->
+						<i class="fab fa-instagram" style="color: #bc2a8d;"></i> <!-- Instagram icon in pink color -->
+					</div>					
+					<div class="whatsapp-message">
+						<h2>WhatsApp Message</h2>
+						<p>For any inquiries, feel free to send us a message on WhatsApp.</p>
+						<p>Click the button below to chat with us on WhatsApp:</p>
+						<a href="https://wa.me/+60182467134" target="_blank" class="whatsapp-button">Chat on WhatsApp</a>
+					</div>
 				</div>
 			</section>
+			
 		</main>
 
 		<!-- div .footer -->

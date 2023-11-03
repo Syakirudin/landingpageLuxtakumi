@@ -519,9 +519,7 @@ a:hover {
     height: 70vh;
 }
 
-.contact-form, .whatsapp-message {
-    width: 45%;
-}
+
 
 .contact h2 {
     font-size: 24px;
@@ -531,28 +529,96 @@ a:hover {
 .contact-form form, .whatsapp-button {
     margin-top: 20px;
 }
+.container {  display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+	  "contact-form whatsapp-message"
+	  "social-media whatsapp-message";
+  }
+  
+  .contact-form { grid-area: contact-form; }
+  
+  .social-media { grid-area: social-media; }
+  
+  .whatsapp-message { grid-area: whatsapp-message; }
+  
+  .contact-form label,
+  .contact-form input {
+	  display: block;
+	  margin-bottom: 10px; /* Add margin at the bottom of labels and input fields */
+  }
+  
+  .contact-form input {
+	  width: 80%;
+	  padding: 10px;
+  }
+  
+  .contact-form button, .whatsapp-button {
+	  background-color: #0077FF;
+	  color: #fff;
+	  padding: 10px 20px;
+	  border: none;
+	  border-radius: 5px;
+	  text-decoration: none;
+	  cursor: pointer;
+	  margin-top: 10px; /* Add margin at the top of the button */
+  }
+  
+  .contact-form button:hover, .whatsapp-button:hover {
+	  background-color: #0055CC;
+  }
+  
 
-.contact-form label, .contact-form input {
-    display: block;
+/* style.css */
+.social-media i {
+    font-size: 24px; /* Set a default icon size */
+    margin-right: 10px; /* Add spacing between icons */
 }
 
-.contact-form input {
-    width: 100%;
-    padding: 10px;
+/* Adjust the size of specific icons */
+.facebook-icon {
+    font-size: 32px; /* Facebook icon with a font size of 32px */
 }
 
-.contact-form button, .whatsapp-button {
-    background-color: #0077FF;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
+.twitter-icon {
+    font-size: 28px; /* Twitter icon with a font size of 28px */
 }
 
-.contact-form button:hover, .whatsapp-button:hover {
-    background-color: #0055CC;
+.tiktok-icon {
+    font-size: 24px; /* TikTok icon with a font size of 24px */
+}
+
+.instagram-icon {
+    font-size: 30px; /* Instagram icon with a font size of 30px */
+}
+
+/* style.css */
+.social-media i {
+    font-size: 24px;
+    margin-right: 10px;
+    transition: transform 0.2s; /* Add a transition for smoother effects */
+}
+
+/* Adjust the size of specific icons */
+.facebook-icon:hover,
+.twitter-icon:hover,
+.tiktok-icon:hover,
+.instagram-icon:hover {
+    font-size: 30px; /* Increase the size on hover */
+    transform: rotate(3deg); /* Add a slight rotation on hover */
+    animation: shake 0.5s ease infinite; /* Add a shake animation on hover */
+}
+
+@keyframes shake {
+    0% { transform: translate(0); }
+    20% { transform: translate(-5px, 0); }
+    40% { transform: translate(5px, 0); }
+    60% { transform: translate(-5px, 0); }
+    80% { transform: translate(5px, 0); }
+    100% { transform: translate(0); }
 }
 
 
