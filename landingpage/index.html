@@ -45,7 +45,7 @@
 			<h1 class="title" data-splitting><span class="title_paralax">UNLEASHED YOUR BRAND</span><span class="stroke">IN
 					ARTIST!</span></h1>
 			<div class="header__img">
-				<img src="img/1.jpg" alt="1">
+				<!-- <img src="img/1.jpg" alt="1"> -->
 			</div>
 			<div class="header__marq">
 				<div class="header__marq-wrapp">
@@ -100,18 +100,36 @@
 					<ul class="benefits__list">
 						<li class="benefits__item">
 							<span class="benefits__num" data-speed="-200">/01</span>
-							<p class="benefits__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quas.
-							</p>
+							<div class="card">
+								<div class="card-content">
+									<img src="./img/undraw_learning_sketching_nd4f.png" alt="Card 1" style="height: 200px; width: 250px;">
+									<h2>Passion For Perfection</h2>
+									<p>We ensure that every pixel is thoughtfully crafted <br>and meets our clients’ expectations</p>
+									<a href="#">Learn More</a>
+								</div>
+							</div>
 						</li>
 						<li class="benefits__item">
 							<span class="benefits__num" data-speed="-150">/02</span>
-							<p class="benefits__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quas.
-							</p>
+							<div class="card">
+								<div class="card-content">
+									<img src="./img/undraw_Solution_mindset_re_57bf.png" alt="Card 1" style="height: 200px; width: 250px;">
+									<h2>Diverse Skill Set</h2>
+									<p>We’ve got your design needs covered <br>using various kind of software from 2D to 3D design</p>
+									<a href="#">Learn More</a>
+								</div>
+							</div>
 						</li>
 						<li class="benefits__item">
 							<span class="benefits__num" data-speed="-150">/03</span>
-							<p class="benefits__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quas.
-							</p>
+							<div class="card">
+								<div class="card-content">
+									<img src="./img/undraw_Completing_re_i7ap.png" alt="Card 1" style="height: 200px; width: 250px;">
+									<h2>Affordable Awesomeness</h2>
+									<p>We serve stunning creations minus the budget blues!</p>
+									<a href="#">Learn More</a>
+								</div>
+							</div>
 						</li>
 						<!-- <li class="benefits__item">
 							<span class="benefits__num" data-speed="-150">/04</span>
@@ -128,6 +146,38 @@
 							<p class="benefits__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quas.
 							</p>
 						</li> -->
+						<!-- <div class="content">
+							<h2 class="section-title">What you<span class="stroke">got</span>
+								<span class="section-title__square"></span>
+							</h2>
+						</div>
+		
+						<div class="card">
+							<img src="card1-image.jpg" alt="Card 1">
+							<div class="card-content">
+								<h2>Card 1</h2>
+								<p>This is the first card.</p>
+								<a href="#">Learn More</a>
+							</div>
+						</div>
+				
+						<div class="card">
+							<img src="card2-image.jpg" alt="Card 2">
+							<div class="card-content">
+								<h2>Card 2</h2>
+								<p>This is the second card.</p>
+								<a href="#">Learn More</a>
+							</div>
+						</div>
+				
+						<div class="card">
+							<img src="card3-image.jpg" alt="Card 3">
+							<div class="card-content">
+								<h2>Card 3</h2>
+								<p>This is the third card.</p>
+								<a href="#">Learn More</a>
+							</div>
+						</div> -->
 					</ul>
 				</div>
 			</section>
@@ -169,7 +219,7 @@
 			</section>
 
 			<!-- div card -->
-			<section class="card-section">
+			<!-- <section class="card-section">
 				<div class="content">
 					<h2 class="section-title">What you<span class="stroke">got</span>
 						<span class="section-title__square"></span>
@@ -202,7 +252,7 @@
 						<a href="#">Learn More</a>
 					</div>
 				</div>
-			</section>
+			</section> -->
 
 			<!-- div .serv -->
 			<section class="section services" data-id="serv">
@@ -264,7 +314,7 @@
 						<h2>Find us on:</h2>
 						<i class="fab fa-facebook" style="color: #1877f2;"></i> <!-- Facebook icon in blue color -->
 						<i class="fab fa-twitter" style="color: #1da1f2;"></i> <!-- Twitter icon in blue color -->
-						<i class="fab fa-tiktok" style="color: white;"></i> <!-- TikTok icon in black color -->
+						<i class="fab fa-tiktok" style="color: black;"></i> <!-- TikTok icon in black color -->
 						<i class="fab fa-instagram" style="color: #bc2a8d;"></i> <!-- Instagram icon in pink color -->
 					</div>					
 					<div class="whatsapp-message">
@@ -289,9 +339,18 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	
 	<script src="js/luxy.js"></script>
 	<script src="js/js.js"></script>
 	<script src="./js/script.js"></script>
+
+	<script type="text/javascript" src="./js/vanilla-tilt.js"></script>
+	<script type="text/javascript">
+		VanillaTilt.init(document.querySelectorAll(".card"), {
+			max: 25,
+			speed: 400
+		});
+	</script>
 </body>
 
 

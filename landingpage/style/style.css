@@ -1,8 +1,9 @@
 /* 1.1.general-setting-pages *************************/
 /****************************************************/
 :root {
-	--pr-color: #fff;
-	--second-color: #0a0a0a;
+	--pr-color: #060606;
+	--first-color: #77FFB3;
+	--second-color: rgb(244, 249, 247);
 	--cubicbz: cubic-bezier(.9, 0, .1, 1);
 	--fz-big: 60px;
 }
@@ -17,7 +18,7 @@
 }
 
 body {
-	background: var(--second-color);
+	background: var(--first-color);
 	margin: 0;
 	
 }
@@ -62,8 +63,8 @@ section {
     padding: 10px 20px;
     /* max-width: 1200px; */
     margin: 0 auto;
-    background-color: var(--second-color);
-    color: #fff;
+    background-color: var(--first-color);
+    color: var(--pr-color);
 }
 
 .logo img {
@@ -83,7 +84,7 @@ section {
 
 .nav-links a {
     text-decoration: none;
-    color: #fff;
+    color: var(--pr-color);
 	background-color: var(--second-color);
 }
 
@@ -277,6 +278,49 @@ section {
 	object-fit: cover;
 }
 
+@media (max-width: 768px) {
+    /* about ********/
+.about .section-title {
+    text-align: center;
+}
+
+.about__wrapp {
+    display: flex;
+    flex-direction: column; /* Change to a vertical layout on smaller screens */
+    gap: 20px; /* Add some vertical spacing between the elements */
+}
+
+.about__img,
+.about__txt {
+    width: 100%; /* Take full width on smaller screens */
+    height: auto;
+    padding: 0 20px; /* Add some horizontal padding */
+}
+
+.about__txt {
+    padding: 0; /* Remove the right padding */
+    text-align: center; /* Center the text on smaller screens */
+}
+
+.about__p {
+    font-size: 16px; /* Reduce the font size for better readability on smaller screens */
+}
+
+.about__img {
+    height: auto; /* Adjust the height to fit the content */
+    max-height: 60vh; /* Set a maximum height to prevent excessive stretching on smaller screens */
+}
+
+.about__img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+}
+
+
 /* benefits ********/
 .benefits__list {
 	display: flex;
@@ -289,7 +333,7 @@ section {
 
 .benefits__item {
 	list-style: none;
-	width: calc(33.33% - 27px);
+	/* width: calc(33.33% - 27px); */
 }
 
 .benefits__num {
@@ -297,6 +341,8 @@ section {
 	font-size: 60px;
 	color: transparent;
 	-webkit-text-stroke: 1px var(--pr-color);
+	width: 100px; 
+	height: 10px;
 }
 
 .benefits__p {
@@ -360,7 +406,7 @@ body, h2, p, a {
 	flex-wrap: wrap;
     justify-content: space-between;
     /* background-color: var(--second-color); */
-    padding: 50px;
+    padding: 10px;
 	height: 100vh;
 	margin-top: 30vh;
 }
@@ -374,13 +420,15 @@ body, h2, p, a {
 
 /* Card styles */
 .card {
-    width: calc(33.33% - 20px); /* Each card takes about 33% of the container width with some margin between them */
-    background-color: #fff;
+    /* width: calc(33.33% - 20px); Each card takes about 33% of the container width with some margin between them */
+	background: rgba(255, 255, 255, 0.2); /* Set the background color with some transparency */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
     margin: 10px; /* Add margin between cards */
-	height: 50vh; /* Adjust the vh value as needed */
+    height: 50vh; /* Adjust the vh value as needed */
+    backdrop-filter: blur(10px);
+	
 }
 
 .card img {
@@ -394,12 +442,12 @@ body, h2, p, a {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 16px;
     margin: 10px 0;
 }
 
 p {
-    font-size: 16px;
+    font-size: 14px;
     color: #555;
     margin: 10px 0;
 }
@@ -421,7 +469,7 @@ a:hover {
 
 /* Media query for smaller screens (stack vertically) */
 @media (max-width: 768px) {
-    .section {
+    .benefits__list {
         flex-direction: column;
         align-items: center;
     }
@@ -462,8 +510,14 @@ a:hover {
 
 .serv__item-txt {
 	font-size: 50px;
-	color: #4b4b4b;
+	color: transparent;
+	-webkit-text-stroke: 2px black;
+	transition: .4s ease;
 	text-transform: uppercase;
+}
+
+.serv__item-txt:hover{
+	color: #060606;
 }
 
 .cursor{
@@ -493,7 +547,7 @@ a:hover {
 }
 
 
-.serv__item:hover ~ .cursor{
+/* .serv__item-text:hover ~ .cursor{
 	transform: translate(-50%, -50%) scale(1.5);
 	background-attachment: white;
 	opacity: .5;
@@ -503,7 +557,7 @@ a:hover {
 .serv__item:hover ~ .cursor2{
 	opacity: 0;
 	cursor: pointer;
-}
+} */
 
 
 /* contact */
@@ -515,7 +569,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: var(--second-color);
+    background-color: var(--first-color);
     height: 70vh;
 }
 
@@ -523,7 +577,7 @@ a:hover {
 
 .contact h2 {
     font-size: 24px;
-	color: #fff;
+	color: var(--pr-color);
 }
 
 .contact-form form, .whatsapp-button {
@@ -558,7 +612,7 @@ a:hover {
   
   .contact-form button, .whatsapp-button {
 	  background-color: #0077FF;
-	  color: #fff;
+	  color: var(--pr-color);
 	  padding: 10px 20px;
 	  border: none;
 	  border-radius: 5px;
