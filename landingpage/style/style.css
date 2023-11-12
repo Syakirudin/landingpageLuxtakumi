@@ -2,8 +2,10 @@
 /****************************************************/
 :root {
 	--pr-color: #060606;
-	--first-color: #77FFB3;
-	--second-color: rgb(244, 249, 247);
+	--first-color: #1A353B;
+	--second-color: #48646A;
+	--third-color: #BFFAFF;
+	--forth-color: #FC8F3A;
 	--cubicbz: cubic-bezier(.9, 0, .1, 1);
 	--fz-big: 60px;
 }
@@ -52,7 +54,7 @@ section {
 .navigation {
     position: sticky;
     top: 0;
-    background-color: #333;
+    background-color: var(--first-color);
     z-index: 100;
 }
 
@@ -63,7 +65,7 @@ section {
     padding: 10px 20px;
     /* max-width: 1200px; */
     margin: 0 auto;
-    background-color: var(--first-color);
+    /* background-color: var(--first-color); */
     color: var(--pr-color);
 }
 
@@ -182,6 +184,18 @@ section {
 	text-transform: uppercase;
 	mix-blend-mode: difference;
 	z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 40px; /* Adjust the font size for smaller screens */
+        position: static;
+    }
+
+    .title_paralax {
+        display: inline-block;
+        will-change: transform;
+    }
 }
 
 .title_paralax {
@@ -418,10 +432,38 @@ body, h2, p, a {
 	height: 100%;
 }
 
+/* Apply some basic styles to the gallery section */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Style individual gallery items */
+.gallery-item {
+    width: calc(33.33% - 10px); /* Each item takes about 33% of the container width with some margin between them */
+    border: 1px solid #ddd; /* Add a border for separation */
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s; /* Add a smooth hover effect */
+}
+
+/* Apply a zoom-in effect on hover */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* You can add more specific styles or adjustments as needed */
+
+
 /* Card styles */
 .card {
     /* width: calc(33.33% - 20px); Each card takes about 33% of the container width with some margin between them */
-	background: rgba(255, 255, 255, 0.2); /* Set the background color with some transparency */
+	background: linear-gradient(45deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.2) 100%);/* Set the background color with some transparency */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
@@ -448,14 +490,14 @@ h2 {
 
 p {
     font-size: 14px;
-    color: #555;
+    color: var(--pr-color);
     margin: 10px 0;
 }
 
 a {
     display: inline-block;
-    background-color: #0077FF;
-    color: #fff;
+    /* background-color: var(--second-color); */
+    color: var(--pr-color);
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -463,8 +505,12 @@ a {
     margin-top: 10px;
 }
 
+.learnmore{
+	background-color: var(--second-color); 
+}
+
 a:hover {
-    background-color: #0055CC;
+    background-color: var(--third-color);
 }
 
 /* Media query for smaller screens (stack vertically) */
@@ -569,7 +615,6 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: var(--first-color);
     height: 70vh;
 }
 
@@ -630,11 +675,13 @@ a:hover {
 .social-media i {
     font-size: 24px; /* Set a default icon size */
     margin-right: 10px; /* Add spacing between icons */
+	
 }
 
 /* Adjust the size of specific icons */
 .facebook-icon {
     font-size: 32px; /* Facebook icon with a font size of 32px */
+	
 }
 
 .twitter-icon {
@@ -653,7 +700,9 @@ a:hover {
 .social-media i {
     font-size: 24px;
     margin-right: 10px;
-    transition: transform 0.2s; /* Add a transition for smoother effects */
+    transition: transform 0.2s;
+	
+	 /* Add a transition for smoother effects */
 }
 
 /* Adjust the size of specific icons */
@@ -665,6 +714,7 @@ a:hover {
     transform: rotate(3deg); /* Add a slight rotation on hover */
     animation: shake 0.5s ease infinite; /* Add a shake animation on hover */
 }
+
 
 @keyframes shake {
     0% { transform: translate(0); }
